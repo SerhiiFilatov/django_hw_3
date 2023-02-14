@@ -1,0 +1,26 @@
+{% extends "homepage.html" %}
+{% load static%}
+{% block main_container %}
+
+
+<main class="container">
+  <div class="row">
+    <section class="col-md-9 mb-2" role="main">
+      <div class="row position-relative">
+        <h1 class="h1">{{ object_slug.name }}</h1>
+        <article class="col w-100">
+          <div class="mb-3">
+            <strong class="fw-light">{{ object_slug.rubric }}</strong>
+            <small>
+              <i class="bi bi-person mx-1"></i><a href="" class="fw-bolder link-secondary">Article Author</a>
+              <i class="bi bi-calendar mx-1"></i><span>{{ object_slug.updated_at}}</span>
+            </small>
+          </div>
+          {{ object_slug.content }}
+        </article>
+      </div>
+    </section>
+
+  </div>
+</main>
+{% endblock main_container%}
